@@ -23,4 +23,6 @@ Hybrid Custom Framework to Test the REST APIs
 ### To Install te Freeze Version
 ```pip install -r requirements.txt```
 
-
+### install parrallel execution
+``pip install pytest-xdist ``
+``pytest -n auto ...``

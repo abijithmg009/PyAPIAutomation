@@ -35,8 +35,6 @@ def put_requests(url, headers, auth, payload, in_json):
 
 def delete_requests(url, headers, auth, in_json):
     delete_response_data = requests.delete(url=url, headers=headers, auth=auth)
-    if in_json is True:
-        return delete_response_data.json()
     return delete_response_data
 
 

@@ -8,7 +8,7 @@ def common_headers_json():
 def common_headers_for_put_delete_patch():
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Basic 1d68124d9fe06ef=",
+        "Authorization": "Basic 99d92eb1ee40bc0=",
     }
     return headers
 

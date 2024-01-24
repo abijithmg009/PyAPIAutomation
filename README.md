@@ -26,3 +26,7 @@ Hybrid Custom Framework to Test the REST APIs
 ### install parrallel execution
 ``pip install pytest-xdist ``
 ``pytest -n auto ...``
+
+### To work with excel
+``pip install openpyxl``
+

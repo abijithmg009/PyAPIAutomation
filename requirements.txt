@@ -21,3 +21,7 @@ requests==2.31.0
 rpds-py==0.17.1
 six==1.16.0
 urllib3==2.1.0
+
+pip~=23.3.2
+filelock~=3.13.1
+openpyxl~=3.1.2

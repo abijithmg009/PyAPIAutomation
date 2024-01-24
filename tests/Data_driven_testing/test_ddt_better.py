@@ -32,19 +32,18 @@ def make_request_auth(username, password):
     response = requests.post(APIConstants.url_create_token(), headers=common_headers_json(), json=payload)
     return response
 
+@pytest.mark.parametrize("user_cred",read_credentials_from_excel("/Users/abijithmg/PycharmProjects/PyAPIAutomation/tests/Data_driven_testing/testdata_ddt.xlsx"))
+def test_post_create_token(user_cred):
+    username = user_cred["username"]
+    password = user_cred["password"]
+    print(username, password)
+    response = make_request_auth(username, password)
+    print(response)
+    # Here you can also write the logic for negative and positive
+    assert response.status_code == 200
 
-def test_post_create_token():
-    file_path = "/Users/abijithmg/PycharmProjects/PyAPIAutomation/tests/Data_driven_testing/testdata_ddt.xlsx"
-    credentials = read_credentials_from_excel(file_path)
 
-    for user_cred in credentials:
-        username = user_cred["username"]
-        password = user_cred["password"]
-        print(username, password)
-        response = make_request_auth(username, password)
-        print(response)
-        # Here you can also write the logic for negative and positive
-        assert response.status_code == 200
+
         
 
 

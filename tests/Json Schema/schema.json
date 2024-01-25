@@ -1,0 +1,66 @@
+{
+    "title": "Root Schema",
+    "type": "object",
+    "required": [
+        "bookingid",
+        "booking"
+    ],
+    "properties": {
+        "bookingid": {
+            "title": "The bookingid Schema",
+            "type": "integer"
+        },
+        "booking": {
+            "title": "The booking Schema",
+            "type": "object",
+            "required": [
+                "firstname",
+                "lastname",
+                "totalprice",
+                "depositpaid",
+                "bookingdates",
+                "additionalneeds"
+            ],
+            "properties": {
+                "firstname": {
+                    "title": "The firstname Schema",
+                    "type": "string"
+                },
+                "lastname": {
+                    "title": "The lastname Schema",
+                    "type": "string"
+                },
+                "totalprice": {
+                    "title": "The totalprice Schema",
+                    "type": "integer"
+                },
+                "depositpaid": {
+                    "title": "The depositpaid Schema",
+                    "type": "boolean"
+                },
+                "bookingdates": {
+                    "title": "The bookingdates Schema",
+                    "type": "object",
+                    "required": [
+                        "checkin",
+                        "checkout"
+                    ],
+                    "properties": {
+                        "checkin": {
+                            "title": "The checkin Schema",
+                            "type": "string"
+                        },
+                        "checkout": {
+                            "title": "The checkout Schema",
+                            "type": "string"
+                        }
+                    }
+                },
+                "additionalneeds": {
+                    "title": "The additionalneeds Schema",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

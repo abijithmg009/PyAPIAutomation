@@ -30,3 +30,8 @@ Hybrid Custom Framework to Test the REST APIs
 ### To work with excel
 ``pip install openpyxl``
 
+### To install dotenv
+``pip install python-dotenv ``
+
+## To work with Json Schema
+``pip install jsonschema``

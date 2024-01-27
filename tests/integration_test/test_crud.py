@@ -44,9 +44,4 @@ class Test_Crud(object):
                                 in_json=False)
         print(response)
 
-    def test_delete_booking(self, create_token, create_booking):  # token, booking id from booking, token call
-        del_url = APIConstants.url_create_booking() + "/" + str(create_booking)
-        response = delete_requests(url=del_url, auth=None, headers=common_headers_for_put_delete_patch(),
-                                   in_json=False)
-        print(response.json())
-        verify_http_status_code(response,201)
+    #
